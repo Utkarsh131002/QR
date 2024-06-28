@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', 'sans-serif';
+}
+
+body{
+    min-height: 100vh;
+    background-color: rgb(58, 173, 219);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.wrapper{
+    height: 280px;
+    background-color: white;
+    border-radius: 7px;
+    max-width: 410px;
+    padding: 16px 25px;
+    transition: height 0.2s ease;
+    margin-top: 10px;
+}
+
+.wrapper.active{
+    height: 530px;
+}
+
+header h1{
+    font-size: 21px;
+    font-weight: 500;
+}
+
+header p{
+    font-size: 16px;
+    margin-top: 5px;
+    color: #474747;
+}
+
+.form {
+    margin: 20px 0 30px;
+}
+
+.form :where(input,button){
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 55px;
+    border-radius: 5px;
+}
+
+.form input{
+    font-size: 18px;
+    padding: 0 17px;
+    border: 1px solid #999;
+}
+
+.form button{
+    cursor: pointer;
+    background-color:rgb(58, 173, 219);
+    border: none;
+    color: white;
+    margin-top: 20px;
+    font-size: 17px;
+}
+
+
+.wrapper .qr-code{
+    border: 1px solid #ccc;
+    opacity: 0;
+    pointer-events: none;
+    padding: 33px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+.wrapper.active .qr-code{
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5s 0.5s ease;
+}
+
+img{
+    height: 100px;
+    width: 100px;
+}
+
+footer{
+    background-color: rgb(75, 34, 34);
+    padding:10px;
+    color: rgba(34, 99, 228, 0.973);
+    margin-top: 280px;
+    width: 100%;
+}
+
+.social{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+}
+.social-icons{
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+
+.social-icons i{
+    transition: transform, 0.5;
+    font-size: large;
+    color: rgba(34, 99, 228, 0.973);
+}
+.social i:hover {
+    transform: translateY(-3px);
+    color: aliceblue;
+}
+
+@media screen and (max-width: 600px){
+
+    .wrapper{
+        width: 350px;
+    }
+
+    footer{
+        margin-bottom: -330px;
+    }
+
+}
